@@ -3,7 +3,7 @@
 namespace TCG\Voyager\Http\Controllers;
 
 use Exception;
-use Illuminate\Console\AppNamespaceDetectorTrait;
+use Illuminate\Console\DetectsApplicationNamespace;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
@@ -18,7 +18,7 @@ use TCG\Voyager\Voyager;
 
 class VoyagerDatabaseController extends Controller
 {
-    use DatabaseUpdate, AppNamespaceDetectorTrait;
+    use DatabaseUpdate, DetectsApplicationNamespace;
 
     public function index()
     {
